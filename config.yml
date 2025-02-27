@@ -1,0 +1,105 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Gadius Charles Jr
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    # - identifier: blog
+    #   name: Blog
+    #   url: /blog
+    #   weight: 20
+    # - identifier: projects
+    #   name: Projects
+    #   url: /projects
+    #   weight: 30
+    # - identifier: experience
+    #   name: Experience
+    #   url: /experience
+    #   weight: 40
+    # - identifier: search
+    #   name: Search
+    #   url: /search
+    #   weight: 50
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+    - identifier: resume
+      name: Resume
+      url: https://drive.google.com/file/d/10n3JgnBBMBlCfyp1qsp3Oy-ZpBjNNTXb/view?usp=sharing
+      weight: 80
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Gadius Charles Jr"
+    subtitle: Hello I'm Gadius Charles, a Data Analyst that is passionate about converting raw data into clear interpretations and visual representations that can drive strategies, enhance lives, and boost business goals. With high efficiency implementation and a Bachelor of Science in Economics with Certifications in Data Analytics.
+
+ 
+    imageUrl: "home/LinkedIn_Photo1.JPG"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:gadiuscharlesjr@gmail.com"
+    - name: "linkedin"
+      url: "https://linkedin.com/in/gadius-charles-jr-a64703211"
+    - name: "github"
+      url: "https://github.com/gadiuscharlesjr"
+    # - name: "youtube"
+    #   url: ""
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
